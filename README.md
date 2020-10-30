@@ -17,5 +17,11 @@ Prop Damage only, Injury.
 
 # 3. Data Preparation
 # 3.1 Data Clean Up
-
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(2).png)
+The plot above tells us that there is a extreme imbalance for the target variable.
+
+I remove features in dataset that may:
+- have high percentage of missing data over 85%.
+- irrelevant to accident severity such as ReportNo, Status.
+- be derived from others features such as SEVERITYDESC, SEGLANEKEY. These derived features don’t add value to dataset. It also create unnecessary correlation between features.
+- be provided after the accidents has been reported and processed such as count of Fatality victims based on its severity. Post accidents features create strong bias into our model.
