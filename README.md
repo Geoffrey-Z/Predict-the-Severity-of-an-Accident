@@ -99,3 +99,14 @@ The time and date of when the accident happens maybe contain some information. F
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(8).png)
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(7).png)
 
+Latitude and longitude feature are converted to Cartesian coordinate assuming the earth is sphere. From the scatter plot below we can see property damages accident is everywhere but fatality accidents are at certain location.
+
+After data clean up, feature engineering and hot encode categorical data, the clean dataset has 75 predictors with 184,146 samples.
+
+# 4. Methodology
+
+Logistic Regression and Random Forest models are used to solve the problem which is to predict the accident severity. I use the following techniques to handle the imbalance in the dataset:
+
+- Feed the models with resampled train data after train_test_split process. I use SMOTE algorithm from imblearn-learn package for oversampling.
+
+![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(25).png)
