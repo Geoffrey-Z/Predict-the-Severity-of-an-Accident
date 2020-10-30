@@ -15,7 +15,6 @@ https://s3.us.cloud-object-storage.appdomain.cloud/cf-courses-data/CognitiveClas
 SEVERITYCODE feature is the target variable to predict the severity of car accidents. It is a categorical feature that is defined as 1, 2 to indicate the accident was of 
 Prop Damage only, Injury.
 
-Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
-Results section where you discuss the results.
-Discussion section where you discuss any observations you noted and any recommendations you can make based on the results.
-Conclusion section where you conclude the report.
+# 3. Data Preparation
+# 3.1 Data Clean Up
+
