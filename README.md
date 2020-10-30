@@ -18,3 +18,4 @@ Prop Damage only, Injury.
 # 3. Data Preparation
 # 3.1 Data Clean Up
 
+![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(2).png)
