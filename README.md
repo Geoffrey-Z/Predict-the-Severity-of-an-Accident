@@ -110,3 +110,5 @@ Logistic Regression and Random Forest models are used to solve the problem which
 - Feed the models with resampled train data after train_test_split process. I use SMOTE algorithm from imblearn-learn package for oversampling.
 
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(25).png)
+
+- The weighting can penalize the model less for errors made on examples from the majority class and penalize the model more for errors made on examples from the minority class.
