@@ -2,10 +2,11 @@
 
 # 1. Introduction
 
+In this project, we will be working on a case study which is to predict the severity of an accident. Say you are driving to another city for work or to visit some friends. It is rainy and windy, and on the way, you come across a terrible traffic jam on the other side of the highway. Long lines of cars barely moving. As you keep driving, police cars start appearing from afar shutting down the highway. Oh, it is an accident and there's a helicopter transporting the ones involved in the crash to the nearest hospital. They must be in critical condition for all of this to be happening. Now, wouldn't it be great if there is something in place that could warn you, given the weather and the road conditions about the possibility of you getting into a car accident and how severe it would be, so that you would drive more carefully or even change your travel if you are able to.
+
 Traffic accidents are a significant source of deaths, injuries, property damage, and a major concern for public health and traffic safety. Accidents are also a major cause of 
 traffic congestion and delay. Effective management of accident is crucial to mitigating accident impacts and improving traffic safety and transportation system efficiency. 
 Accurate predictions of severity can provide crucial information for emergency responders to evaluate the severity level of accidents, estimate the potential impacts, and implement efficient accident management procedures. By recognizing the key factors that influence accident severity, the solution may be of great utility to various Government Departments/Authorities like DOT and Police. The results of analysis and modeling can be used by these Departments to take appropriate measures; such as early warning system to drivers; to reduce accident impact and thereby improve traffic safety. It is also useful to the Insurers in terms of reduced claims and better underwriting as well as rate making.
-Introduction where you discuss the business problem and who would be interested in this project.
 
 # 2. Data Understanding
 The dataset come from City of Seattle Open Data Portal that contains all types of collisions from 2004 to Present. This raw dataset consists of 221,266 cases and 40 attributes. The description of each columns can be found in this link 
@@ -16,7 +17,7 @@ SEVERITYCODE feature is the target variable to predict the severity of car accid
 Prop Damage only, Injury.
 
 # 3. Data Preparation
-# 3.1 Data Clean Up
+## 3.1 Data Clean Up
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(2).png)
 
 The plot above tells us that there is a extreme imbalance for the target variable.
@@ -28,7 +29,7 @@ I remove features in dataset that may:
 - be provided after the accidents has been reported and processed such as count of Fatality victims based on its severity. Post accidents features create strong bias into our model.
 
 
-## Percent of missing values in each column
+### Percent of missing values in each column
 |column|missing percent|
 |---|---|
 |PEDROWNOTGRNT|	97.602646|
@@ -144,15 +145,15 @@ On the winner model, oversampling was done only one time over minority classes. 
 ## 5.2 RandomizedSearchCV - Hyperparameter Tuning Winner Model
 The winner model is further investigated to see if its performance can be increased by tuning some hyperparameter in the model. The process is almost the same with cross validation mentioned previously. The difference is combination of parameters on each train fold are tested to find the best f1 score. This whole process took 448.7 minutes in a single quad core machine.
 
-![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(29).png)
+![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(30).png)
 
 Classification report with tuned parameters:
 
-![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(30).png)
+![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(31).png)
 
 Confusion matrix with tuned parameters:
 
-![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(31).png)
+![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(32).png)
 
 With tuned parameters, the model overall score were improved, specifically F1 score increased from 0.67 to 0.82.
 
