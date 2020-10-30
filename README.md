@@ -29,7 +29,7 @@ I remove features in dataset that may:
 
 
 ## Percent of missing values in each column
-|column|percent|
+|column|missing percent|
 |---|---|
 |PEDROWNOTGRNT|	97.602646|
 |EXCEPTRSNDESC|	97.103861|
