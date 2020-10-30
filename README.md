@@ -70,6 +70,8 @@ I remove features in dataset that may:
 |OBJECTID|	0.000000|
 |HITPARKEDCAR|	0.000000|
 
+Each features are examined thoroughly for its consistency for every classes. Some features clearly stand out as a differentiator for a class but indistinguishable on other classes.
+
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(4).png)
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(3).png)
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(6).png)
