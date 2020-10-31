@@ -132,11 +132,11 @@ Each model is evaluated to predict classes from test data that has 46,037 sample
 ## Models Metrics Summary
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(27).png)
 
-Looking at the table above, it seems like Logistic Regression - oversample model is the best with f1 score 0.71. RandomForest - Oversample that has f1 score 0.67. However, RandomForest hasn't tuned hyperparameter yet. After tuning hyperparameters, the score maybe be better.
+Looking at the table above, it seems like Logistic Regression - oversample model is the best with f1 score 0.73. RandomForest - Oversample that has f1 score 0.70. However, RandomForest hasn't tuned hyperparameter yet. After tuning hyperparameters, the score may be better.
 
 ## 5.1 Cross Validation
 
-On the winner model, oversampling was done only one time over minority classes. We need to do cross validation on our model to verify its consistency. First we split the dataset into training and validation folds, oversampling, train classifier on training folds and then finally validate the classifier on remaining fold.
+On the RandomForest model, oversampling was done only one time over minority classes. We need to do cross validation on our model to verify its consistency. First we split the dataset into training and validation folds, oversampling, train classifier on training folds and then finally validate the classifier on remaining fold.
 
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(28).png)
 
@@ -155,8 +155,8 @@ Confusion matrix with tuned parameters:
 
 With tuned parameters, the model overall score were improved, specifically F1 score increased from 0.67 to 0.82.
 
-6. Discussion
+# 6. Discussion
 The clean dataset has 75 features that mostly categorical. Majority of the features are somewhat interrelated to each other. That said, no features left behind...A tuned parameter RandomForest fed with oversampled data can predict 74% true positive on 74 samples out of 47,359 samples in class F, a 0.15% of test set population. It's quite impressive.
 
-7. Conclusion
+# 7. Conclusion
 Car collisions severity prediction is a classic problem. Many academic papers have been published on this matter with different approaches statistical, machine learning, and deep learning. In this study, I use machine learning approach to analyze the relationship between accident severity with given set of features. The challenge is real life data always imbalance. Synthetic Minority Oversampling Technique (SMOTE) is used to solve imbalance data and followed by tuned RandomForest algorithm performs well.
