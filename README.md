@@ -106,6 +106,8 @@ Latitude and longitude feature are converted to Cartesian coordinate assuming th
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(39).png)
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(40).png)
 
+As we can see from the above map, most of the categorical features are dependent on each other.
+
 After data clean up, feature engineering and hot encode categorical data, the clean dataset has 75 predictors with 184,146 samples.
 
 # 4. Methodology
