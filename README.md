@@ -9,7 +9,7 @@ traffic congestion and delay. Effective management of accident is crucial to mit
 Accurate predictions of severity can provide crucial information for emergency responders to evaluate the severity level of accidents, estimate the potential impacts, and implement efficient accident management procedures. By recognizing the key factors that influence accident severity, the solution may be of great utility to various Government Departments/Authorities like DOT and Police. The results of analysis and modeling can be used by these Departments to take appropriate measures; such as early warning system to drivers; to reduce accident impact and thereby improve traffic safety. It is also useful to the Insurers in terms of reduced claims and better underwriting as well as rate making.
 
 # 2. Data Understanding
-The dataset come from City of Seattle Open Data Portal that contains all types of collisions from 2004 to Present. This raw dataset consists of 221,266 cases and 40 attributes. The description of each columns can be found in this link 
+The dataset come from City of Seattle Open Data Portal that contains all types of collisions from 2004 to Present. This raw dataset consists of 194,673 cases and 40 attributes. The description of each columns can be found in this link 
 
 https://s3.us.cloud-object-storage.appdomain.cloud/cf-courses-data/CognitiveClass/DP0701EN/version-2/Metadata.pdf
 
@@ -141,7 +141,7 @@ On the RandomForest model, oversampling was done only one time over minority cla
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(28).png)
 
 ## 5.2 RandomizedSearchCV - Hyperparameter Tuning Winner Model
-The winner model is further investigated to see if its performance can be increased by tuning some hyperparameter in the model. The process is almost the same with cross validation mentioned previously. The difference is combination of parameters on each train fold are tested to find the best f1 score. This whole process took 448.7 minutes in a single quad core machine.
+The RandomForest model is further investigated to see if its performance can be increased by tuning some hyperparameter in the model. The process is almost the same with cross validation mentioned previously. The difference is combination of parameters on each train fold are tested to find the best f1 score. This whole process took 448.7 minutes in a single quad core machine.
 
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(30).png)
 
@@ -153,10 +153,10 @@ Confusion matrix with tuned parameters:
 
 ![image](https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/IMG/download%20(32).png)
 
-With tuned parameters, the model overall score were improved, specifically F1 score increased from 0.67 to 0.82.
+With tuned parameters, the model overall score were improved, specifically F1 score increased from 0.70 to 0.76.
 
 # 6. Discussion
-The clean dataset has 75 features that mostly categorical. Majority of the features are somewhat interrelated to each other. That said, no features left behind...A tuned parameter RandomForest fed with oversampled data can predict 74% true positive on 74 samples out of 47,359 samples in class F, a 0.15% of test set population. It's quite impressive.
+The clean dataset has 75 features that mostly categorical. Majority of the features are somewhat interrelated to each other. That said, no features left behind...A tuned parameter RandomForest fed with oversampled data can predict 83% true positive on 13,954 samples out of 46,037 samples in class Injury, a 30% of test set population. It's quite impressive.
 
 # 7. Conclusion
 Car collisions severity prediction is a classic problem. Many academic papers have been published on this matter with different approaches statistical, machine learning, and deep learning. In this study, I use machine learning approach to analyze the relationship between accident severity with given set of features. The challenge is real life data always imbalance. Synthetic Minority Oversampling Technique (SMOTE) is used to solve imbalance data and followed by tuned RandomForest algorithm performs well.
