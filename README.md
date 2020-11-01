@@ -166,3 +166,6 @@ The clean dataset has 75 features that mostly categorical. Majority of the featu
 
 # 7. Conclusion
 Car collisions severity prediction is a classic problem. Many academic papers have been published on this matter with different approaches statistical, machine learning, and deep learning. In this study, I use machine learning approach to analyze the relationship between accident severity with given set of features. The challenge is real life data always imbalance. Synthetic Minority Oversampling Technique (SMOTE) is used to solve imbalance data and followed by tuned RandomForest algorithm performs well.
+
+# 8. Code
+https://github.com/Geoffrey-Z/Predict-the-Severity-of-an-Accident/blob/master/Predict%20the%20Severity%20of%20an%20Accident%20(13).ipynb
